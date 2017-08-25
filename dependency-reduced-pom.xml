@@ -140,6 +140,15 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+              <minimizeJar>true</minimizeJar>
+              <filters>
+                <filter>
+                  <artifact>commons-logging:commons-logging</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+              </filters>
               <transformers>
                 <transformer>
                   <mainClass>org.toilelibre.libe.curl.CurlCommandLine</mainClass>
